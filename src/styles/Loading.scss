@@ -1,0 +1,9 @@
+@import "../assets/scss/variables";
+
+.loader {
+  @include flex;
+  font-size: 5rem;
+  font-weight: bold;
+  color: $white;
+  margin-top: 8rem;
+}

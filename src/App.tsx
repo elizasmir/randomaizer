@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UserCard from "./components/UserCard";
+import Loading from "./components/Loading";
 import "./styles/App.scss";
 
-
 export interface IUser {
-  firstName: string
-  lastName: string
-  country: string
-  avatar: string
+  firstName: string;
+  lastName: string;
+  country: string;
+  avatar: string;
 }
-
 
 const App = () => {
   const [randomUser, setRandomUser] = useState<IUser | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
+  let componentMounted = true; // hotfix to a memory leak warning
 
   useEffect(() => {
     setIsLoading(true);
@@ -39,6 +39,9 @@ const App = () => {
         }
       })
       .catch((error) => console.log(error));
+    return () => {
+      componentMounted = false; 
+    };
   }, []);
 
   return (
@@ -46,7 +49,7 @@ const App = () => {
       <header className="App-header">
         <h1>Randomizer</h1>
       </header>
-      {isLoading ? <div>...loading</div> : <UserCard user={randomUser} />}
+      {isLoading ? <Loading /> : <UserCard user={randomUser} />}
     </section>
   );
 };
