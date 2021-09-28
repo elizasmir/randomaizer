@@ -1,0 +1,32 @@
+// google fonts
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|Rufina|Work+Sans&display=swap");
+@import "../assets/scss/variables";
+
+.user-card {
+  @include flex;
+  font-size: 1.5rem;
+  font-family: $worksans;
+  color: $white;
+
+  .disclaimer {
+    margin: 1rem;
+    font-size: 0.7rem;
+    align-self: flex-start;
+  }
+
+  .user-avatar img {
+    margin: 2rem;
+    border: 4px solid $white;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .user-data {
+    .user-name,
+    .user-country {
+      align-self: flex-start;
+      font-weight: 600;
+      color: $bruise;
+    }
+  }
+}

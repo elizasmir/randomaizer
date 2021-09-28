@@ -1,0 +1,22 @@
+// colors
+$black: #121212;
+$white: #FFFFFF;
+$blue: #3700B3;
+$violet: #BB86FC;
+$bruise: #03DAC6;
+
+
+// header
+$PT: "PT Serif", serif;
+
+// text 
+$worksans: "Work Sans", sans-serif;
+
+// center flex rules
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

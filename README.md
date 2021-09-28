@@ -1,3 +1,32 @@
+# Randomizer React App
+## Test assignment:
+
+Develop a React application that fetches and displays data from https://randomuser.me/api/. The following 4 values should be displayed the user’s:
+- first name,
+- last name, 
+- image,
+- country.
+
+The requirement from us is that it fetches and displays a user when the application/page loads, and then you have to `refresh the page to fetch a new user`. A button is not necessary.
+`No need to store` previous results.
+
+### Things to keep in mind:
+
+Both the functionality, code quality and styling are going to be evaluated and discussed in a follow-up interview.
+We work with TypeScript, but accept solutions in both TypeScript and JavaScript (and even ReScript).
+`Automated tests are optional.`
+The source code may be delivered as a zip-file, or simply a GitHub, CodeSandbox (or similar) repository.
+
+### External tools:
+
+As a Developer you are free to access any web resources but is expected to be able to explain and reason about the solution.
+
+### Evaluation:
+
+The test is meant to evaluate programming and problem solving skills. Write the code in the manner you think is good practice and is comfortable with (coding standard, naming conventions, appropriate comments, data structures, etc).
+
+#
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
