@@ -12,7 +12,7 @@ const UserCard = (props: IUserCard) => {
       return (
         <Fragment>
           <section className="user-avatar">
-            <img src={props.user.avatar} />
+            <img alt="user avatar" src={props.user.avatar} />
           </section>
           <section className="user-data">
             <p>Hello! I'm</p>

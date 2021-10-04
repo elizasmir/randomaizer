@@ -14,7 +14,6 @@ export interface IUser {
 const App = () => {
   const [randomUser, setRandomUser] = useState<IUser | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
-  let componentMounted = true; // hotfix to a memory leak warning
 
   useEffect(() => {
     setIsLoading(true);
@@ -38,10 +37,12 @@ const App = () => {
           setIsLoading(false);
         }
       })
-      .catch((error) => console.log(error));
-    return () => {
-      componentMounted = false; 
-    };
+      .catch((error) => {
+        setIsLoading(false);
+        <p>API problems</p>;
+        console.log(error);
+      });
+    return () => {};
   }, []);
 
   return (
